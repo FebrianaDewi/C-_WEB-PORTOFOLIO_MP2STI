@@ -1,16 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
 </head>
 <body>
 
-    <h2>TEST AJA INI MAH</h2>
-    <h2>TEST INI STEFANI</h2>
-    <h2>TEST INI RASYA</h2>
-    <h2>TEST INI NABELA</h2>
-    
+<!-- ========== Navbar =========== -->
+<nav class="navbar">
+    <div class="container">
+    <div class="logo">C# JOS JIS</div>
+
+<button class="nav-toggle" aria-label="Buka menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+ 
+    <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="portofolio.html">Portofolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </div>
+  </nav>
+
+<!-- ======== Hero Section ========== -->
+<section class="hero">
+    <div class="container">
+ 
+      <div class="hero-text">
+        <h1>Halo, Kami <span>Kelompok C#</span></h1>
+        <p>
+          Kami adalah mahasiswa baru Teknologi Informasi yang sedang belajar
+          membangun website, mengasah kemampuan coding, dan mengumpulkan
+          portofolio serta sertifikat selama masa perkuliahan.
+        </p>
+        <a href="portofolio.html" class="btn">Lihat Portofolio</a>
+      </div>
+ 
+      <div class="hero-photo">
+        <img src="assets/image/foto_kelompok.JPG" alt="Foto Kelompok C#" />
+      </div>
+ 
+    </div>
+  </section>
+
+<!--- ========== Informasi Kelompok =========== -->
+<section class="info">
+    <div class="container">
+      <h2 class="section-title">Tentang Kelompok</h2>
+      <p class="section-subtitle">Sedikit informasi mengenai kelompok kami</p>
+ 
+      <div class="info-grid">
+ 
+        <!-- Card 1: GANTI nama kelompok & deskripsi -->
+        <div class="info-card">
+          <h3>Nama Kelompok</h3>
+          <p>Javren (Java Keren) - Kelompok 16</p>
+        </div>
+ 
+        <!-- Card 2: GANTI daftar anggota -->
+        <div class="info-card">
+          <h3>Anggota</h3>
+          <ul>
+            <li>Anggun Sonya Meylani</li>
+            <li>Nama Anggota 2</li>
+            <li>Nama Anggota 3</li>
+          </ul>
+        </div>
+ 
+        <!-- Card 3: GANTI minat/bidang yang dipelajari -->
+        <div class="info-card">
+          <h3>Minat &amp; Bidang</h3>
+          <p>Web Development, UI/UX Design, dan Internet of Things (IoT).</p>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+
+<!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kelompok C# - Angkatan IX. All rights reserved.</p>
+    </div>
+  </footer>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
