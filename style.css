@@ -99,14 +99,16 @@ section {
   z-index: 100;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgba(17, 24, 39, 0.06);
 }
 
 .navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  min-height: 72px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .logo {
@@ -115,6 +117,7 @@ section {
   gap: 10px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
   color: var(--color-primary);
   white-space: nowrap;
 }
@@ -134,6 +137,8 @@ section {
 }
 
 .nav-links a {
+  display: block;
+  padding: 8px 0;
   font-weight: 500;
   color: var(--color-dark);
   transition: color 0.2s ease;
@@ -152,13 +157,20 @@ section {
 
 .nav-toggle {
   display: none;
+  width: 42px;
+  height: 42px;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> 08d3aed90e973890334fa608e3e470f95e731d16
   justify-content: center;
   gap: 5px;
   width: 40px;
   height: 40px;
   background: none;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -169,7 +181,17 @@ section {
   border-radius: 2px;
 }
 
+<<<<<<< HEAD
 /* ---------- HERO ---------- */
+=======
+.nav-toggle:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+/* ---------- 3. HERO SECTION ---------- */
+>>>>>>> 08d3aed90e973890334fa608e3e470f95e731d16
 
 .hero {
   padding: 80px 0;
@@ -451,13 +473,16 @@ section {
 
   .nav-links {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
     right: 0;
     background-color: var(--color-white);
     flex-direction: column;
     gap: 0;
-    border-bottom: 1px solid var(--color-border);
+    padding: 8px 0;
+    border: 1px solid var(--color-border);
+    border-top: 0;
+    box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
     display: none;
     box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
   }
@@ -467,8 +492,13 @@ section {
   }
 
   .nav-links a {
-    padding: 14px 24px;
-    border-top: 1px solid var(--color-border);
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: var(--color-light-bg);
   }
 
   .nav-toggle {
