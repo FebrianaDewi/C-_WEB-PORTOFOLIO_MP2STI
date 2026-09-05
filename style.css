@@ -118,14 +118,16 @@ section {
   z-index: 100;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgba(17, 24, 39, 0.06);
 }
 
 .navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  min-height: 72px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /* GANTI teks logo di file HTML (bagian <div class="logo">) */
@@ -135,6 +137,7 @@ section {
   gap: 10px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
   color: var(--color-primary);
 }
 
@@ -147,10 +150,13 @@ section {
 }
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 28px;
 }
 
 .nav-links a {
+  display: block;
+  padding: 8px 0;
   font-weight: 500;
   color: var(--color-dark);
   transition: color 0.2s ease;
@@ -164,10 +170,15 @@ section {
 /* Tombol menu untuk tampilan mobile (hamburger) */
 .nav-toggle {
   display: none;
+  width: 42px;
+  height: 42px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -176,6 +187,12 @@ section {
   height: 3px;
   background-color: var(--color-dark);
   border-radius: 2px;
+}
+
+.nav-toggle:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
 }
 
 /* ---------- 3. HERO SECTION ---------- */
@@ -470,13 +487,16 @@ section {
   /* Navbar: sembunyikan menu, tampilkan tombol hamburger */
   .nav-links {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
     right: 0;
     background-color: var(--color-white);
     flex-direction: column;
     gap: 0;
-    border-bottom: 1px solid var(--color-border);
+    padding: 8px 0;
+    border: 1px solid var(--color-border);
+    border-top: 0;
+    box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
     display: none;
   }
 
@@ -485,8 +505,13 @@ section {
   }
 
   .nav-links a {
-    padding: 14px 24px;
-    border-top: 1px solid var(--color-border);
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: var(--color-light-bg);
   }
 
   .nav-toggle {
