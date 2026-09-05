@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angkatan IX - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">C# JOS JIS</div>
+
+      <button class="nav-toggle" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portofolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ PORTFOLIO SECTION ============ -->
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Portofolio Kami</h2>
+      <p class="section-subtitle">
+        Kumpulan project dan sertifikat yang telah kami kerjakan/peroleh.
+      </p>
+
+      <!-- Tombol untuk berpindah antara Project dan Sertifikat -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="tab-project">Project</button>
+        <button class="tab-btn" data-tab="tab-sertifikat">Sertifikat</button>
+      </div>
+
+      <!-- =========================================================
+           TAB 1: PROJECT
+
+           CARA MENAMBAH PROJECT BARU:
+           1. Copy 1 blok <div class="card"> ... </div> di bawah ini
+              (dari komentar "AWAL CARD PROJECT" sampai "AKHIR CARD PROJECT").
+           2. Paste tepat di bawah card terakhir, masih di dalam
+              <div class="card-grid">.
+           3. Ganti bagian berikut sesuai project kalian:
+              - src gambar
+              - judul project (di dalam <h3>)
+              - tahun & teknologi (di dalam <p class="card-meta">)
+              - deskripsi singkat (di dalam <p> kedua)
+              - link project/GitHub (di dalam href)
+           Tidak perlu mengubah JavaScript sama sekali.
+      ========================================================= -->
+      <div id="tab-project" class="tab-content active">
+        <div class="card-grid">
+
+          <!-- AWAL CARD PROJECT -->
+          <!-- CARD PROJECT: Website Portofolio Kelompok (project ini sendiri) -->
+          <div class="card">
+            <img src="assets/image/kucing6.jpg" alt="Website Portofolio Kelompok C#" class="card-image" />
+            <div class="card-body">
+              <h3>Website Portofolio Kelompok</h3>
+              <p class="card-meta">2026 &bull; HTML, CSS, JavaScript</p>
+              <p>
+                Website portofolio resmi kelompok kami untuk menampilkan identitas
+                kelompok, project, sertifikat, dan kontak anggota. Dibangun dari
+                template dasar, dimodifikasi sendiri, dan di-deploy menggunakan
+                GitHub Pages.
+              </p>
+              <a href="https://github.com/username/nama-repo" target="_blank" class="btn-outline">Lihat Project</a>
+            </div>
+          </div>
+          <!-- AKHIR CARD PROJECT -->
+
+        </div>
+      </div>
+
+      <!-- =========================================================
+           TAB 2: SERTIFIKAT
+
+           CARA MENAMBAH SERTIFIKAT BARU:
+           1. Copy 1 blok <div class="card"> ... </div> di bawah ini
+              (dari komentar "AWAL CARD SERTIFIKAT" sampai "AKHIR CARD SERTIFIKAT").
+           2. Paste di bawah card sertifikat terakhir, masih di dalam
+              <div class="card-grid">.
+           3. Ganti bagian berikut sesuai sertifikat kalian:
+              - src gambar sertifikat (taruh file di assets/certificates/)
+              - nama sertifikat (di dalam <h3>)
+              - nama penyelenggara, tahun, dan nama pemilik (di dalam <p class="card-meta">)
+              - link sertifikat (di dalam href, boleh link Google Drive)
+           Tidak perlu mengubah JavaScript sama sekali.
+
+           Kalau 1 sertifikat diikuti beberapa anggota (misalnya
+           "Dasar Pemrograman Web" diikuti Sonya, Budi, dan Rina),
+           cukup buat 1 card TERPISAH untuk tiap anggota dengan judul
+           yang sama, dibedakan lewat nama di card-meta dan link-nya.
+      ========================================================= -->
+      <div id="tab-sertifikat" class="tab-content">
+        <div class="card-grid">
+
+          <!-- AWAL CARD SERTIFIKAT -->
+          <div class="card">
+            <img src="assets/certificate/certificate_anggun.jpg" alt="Sertifikat Dasar Pemrograman Web - Anggun" class="card-image" />
+            <div class="card-body">
+              <h3>Dasar Pemrograman Web</h3>
+              <p class="card-meta">Dicoding &bull; 2026 &bull; oleh Anggun</p>
+              <a href="https://drive.google.com/file/d/1OR8-tDMbk824ggRIB6uxDfg_3iE_KFlC/view?usp=drive_link" target="_blank" class="btn-outline">Lihat Sertifikat</a>
+            </div>
+          </div>
+          <!-- AKHIR CARD SERTIFIKAT -->
+
+          <!-- Sertifikat sama, diikuti anggota lain -->
+          <div class="card">
+            <img src="assets/certificate/certificate_arvery.jpg" alt="Sertifikat Dasar Pemrograman Web - Budi" class="card-image" />
+            <div class="card-body">
+              <h3>Dasar Pemrograman Web</h3>
+              <p class="card-meta">Dicoding &bull; 2026 &bull; oleh Arvey</p>
+              <a href="https://drive.google.com/file/d/1k6NHrpR-EYwkEIu1LOt8Ct9QhVeKr62Z/view?usp=sharing" target="_blank" class="btn-outline">Lihat Sertifikat</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="assets/certificate/certificate_jonatan.jpg" alt="Sertifikat Dasar Pemrograman Web - Rina" class="card-image" />
+            <div class="card-body">
+              <h3>Dasar Pemrograman Web</h3>
+              <p class="card-meta">Dicoding &bull; 2026 &bull; oleh Jonathan</p>
+              <a href="https://drive.google.com/file/d/1dTTBOEnlNivNQ0UIOhZh6rP_EvVyPiUp/view?usp=drive_link" target="_blank" class="btn-outline">Lihat Sertifikat</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kelompok C# - Angkatan IX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

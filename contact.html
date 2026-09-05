@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">C# JOS JIS</div>
+
+      <button class="nav-toggle" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portofolio.html">Portofolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Hubungi kami melalui akun sosial media di bawah ini.
+      </p>
+
+      <!-- =========================================================
+           CARA MENAMBAH / MENGGANTI ANGGOTA:
+           1. Copy 1 blok <div class="member-card"> ... </div>
+              (dari "AWAL CARD ANGGOTA" sampai "AKHIR CARD ANGGOTA").
+           2. Paste di bawah card anggota terakhir, masih di dalam
+              <div class="card-grid">.
+           3. Ganti:
+              - foto anggota (src)
+              - nama (di dalam <h3>)
+              - peran/jabatan (opsional, di dalam <p class="member-role">)
+              - link Instagram, LinkedIn, dan GitHub (di dalam href)
+      ========================================================= -->
+      <div class="card-grid">
+
+        <!-- AWAL CARD ANGGOTA -->
+        <div class="member-card">
+          <img src="assets/image/kucing6.jpg" alt="Foto Anggun Sonya Meylani" class="member-photo" />
+          <h3>Anggun Sonya Meylani</h3>
+          <p class="member-role">Anggota 1</p>
+          <div class="member-links">
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <!-- AKHIR CARD ANGGOTA -->
+
+        <!-- Contoh anggota kedua, copy pola yang sama -->
+        <div class="member-card">
+          <img src="assets/image/kucing2.jpeg" alt="Foto Anggota 2" class="member-photo" />
+          <h3>Nama Anggota 2</h3>
+          <p class="member-role">Anggota 2</p>
+          <div class="member-links">
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <img src="assets/image/kucing10.jpg" alt="Foto Anggota 3" class="member-photo" />
+          <h3>Nama Anggota 3</h3>
+          <p class="member-role">Anggota 3</p>
+          <div class="member-links">
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kelompok C# - Angkatan IX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
