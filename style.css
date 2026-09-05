@@ -1,33 +1,14 @@
-/* =========================================================
-   STYLE.CSS
-   File ini berisi SEMUA styling untuk index.html, portfolio.html,
-   dan contact.html.
-
-   Cara membaca file ini:
-   1. RESET & VARIABLES  -> warna, font, dasar
-   2. NAVBAR             -> menu atas
-   3. HERO SECTION        -> bagian depan halaman Home
-   4. INFO SECTION        -> info kelompok di Home
-   5. PORTFOLIO           -> card project & sertifikat
-   6. CONTACT             -> card anggota
-   7. FOOTER
-   8. RESPONSIVE (MEDIA QUERY) -> tampilan HP
-   ========================================================= */
-
-/* ---------- 1. RESET & VARIABLES ---------- */
-
-/* Ganti kode warna di bawah ini untuk mengubah tema warna
-   seluruh website secara otomatis */
+/* ---------- RESET & VARIABLES ---------- */
 :root {
-  --color-primary: #2563eb;      /* warna utama (tombol, link, aksen) */
+  --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;
-  --color-dark: #111827;         /* warna teks gelap */
-  --color-gray: #6b7280;         /* warna teks abu-abu / deskripsi */
-  --color-light-bg: #f9fafb;     /* warna latar terang */
-  --color-border: #e5e7eb;       /* warna garis pembatas */
+  --color-dark: #111827;
+  --color-gray: #6b7280;
+  --color-light-bg: #f9fafb;
+  --color-border: #e5e7eb;
   --color-white: #ffffff;
-  --radius: 12px;                /* kelengkungan sudut card */
-  --max-width: 1100px;           /* lebar maksimal konten */
+  --radius: 12px;
+  --max-width: 1100px;
 }
 
 * {
@@ -77,7 +58,7 @@ section {
   margin-bottom: 32px;
 }
 
-/* Tombol umum (dipakai di hero, card, dll) */
+/* ---------- BUTTONS ---------- */
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -110,7 +91,7 @@ section {
   color: var(--color-white);
 }
 
-/* ---------- 2. NAVBAR ---------- */
+/* ---------- NAVBAR ---------- */
 
 .navbar {
   position: sticky;
@@ -128,7 +109,6 @@ section {
   padding-bottom: 16px;
 }
 
-/* GANTI teks logo di file HTML (bagian <div class="logo">) */
 .logo {
   display: flex;
   align-items: center;
@@ -136,6 +116,7 @@ section {
   font-size: 20px;
   font-weight: 700;
   color: var(--color-primary);
+  white-space: nowrap;
 }
 
 .logo-img {
@@ -145,8 +126,10 @@ section {
   border-radius: 6px;
   flex-shrink: 0;
 }
+
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 28px;
 }
 
@@ -161,11 +144,19 @@ section {
   color: var(--color-primary);
 }
 
-/* Tombol menu untuk tampilan mobile (hamburger) */
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.3);
+  outline-offset: 4px;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   cursor: pointer;
@@ -178,7 +169,7 @@ section {
   border-radius: 2px;
 }
 
-/* ---------- 3. HERO SECTION ---------- */
+/* ---------- HERO ---------- */
 
 .hero {
   padding: 80px 0;
@@ -226,7 +217,7 @@ section {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------- 4. INFO SECTION (Home) ---------- */
+/* ---------- INFO ---------- */
 
 .info-grid {
   display: flex;
@@ -257,7 +248,7 @@ section {
   margin-bottom: 4px;
 }
 
-/* ---------- 5. PORTFOLIO (Card Project & Sertifikat) ---------- */
+/* ---------- PORTFOLIO ---------- */
 
 .tabs {
   display: flex;
@@ -289,16 +280,12 @@ section {
   display: block;
 }
 
-/* Wadah kumpulan card: default row (desktop),
-   akan berubah jadi column di mobile lewat media query */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-/* Satu card project/sertifikat.
-   INI CARD YANG DI-COPY MAHASISWA UNTUK MENAMBAH DATA BARU. */
 .card {
   flex: 1 1 280px;
   max-width: 320px;
@@ -346,9 +333,7 @@ section {
   align-self: flex-start;
 }
 
-/* ---------- CARD SERTIFIKAT UNTUK BEBERAPA ANGGOTA SEKALIGUS ----------
-   Dipakai kalau 1 sertifikat yang sama diikuti oleh beberapa anggota,
-   supaya tidak perlu bikin card terpisah untuk tiap orang. */
+/* Certificate member thumbnails */
 .card-thumbs {
   display: flex;
   gap: 8px;
@@ -391,7 +376,7 @@ section {
   color: var(--color-dark);
 }
 
-/* ---------- 6. CONTACT (Card Anggota) ---------- */
+/* ---------- CONTACT ---------- */
 
 .member-card {
   flex: 1 1 240px;
@@ -437,7 +422,7 @@ section {
   text-decoration: underline;
 }
 
-/* ---------- 7. FOOTER ---------- */
+/* ---------- FOOTER ---------- */
 
 .footer {
   border-top: 1px solid var(--color-border);
@@ -447,11 +432,8 @@ section {
   font-size: 14px;
 }
 
-/* ---------- 8. RESPONSIVE (MEDIA QUERY) ---------- */
-/* Tampilan tablet/HP: lebar layar 768px ke bawah */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-
-  /* Hero: foto & teks jadi ditumpuk (column) bukan sejajar */
   .hero .container {
     flex-direction: column;
     text-align: center;
@@ -467,7 +449,6 @@ section {
     height: 240px;
   }
 
-  /* Navbar: sembunyikan menu, tampilkan tombol hamburger */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -478,6 +459,7 @@ section {
     gap: 0;
     border-bottom: 1px solid var(--color-border);
     display: none;
+    box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08);
   }
 
   .nav-links.open {
@@ -493,8 +475,6 @@ section {
     display: flex;
   }
 
-  /* Semua kumpulan card (project, sertifikat, anggota)
-     ditumpuk vertikal (column) di mobile */
   .card-grid {
     flex-direction: column;
     align-items: stretch;

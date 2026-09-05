@@ -11,17 +11,20 @@
   <!-- ============ NAVBAR ============ -->
   <nav class="navbar">
     <div class="container">
-      <div class="logo">C# JOS JIS</div>
+      <a class="logo" href="index.html" aria-label="Beranda Kelompok C#">
+        <img src="assets/img/gambarlogo.jpeg" alt="" class="logo-img" />
+        <span>C# GACORR BOSH</span>
+      </a>
 
-      <button class="nav-toggle" aria-label="Buka menu">
+      <button class="nav-toggle" type="button" aria-label="Buka menu" aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html" class="active">Portofolio</a></li>
+        <li><a href="portofolio.html" class="active">Portofolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
